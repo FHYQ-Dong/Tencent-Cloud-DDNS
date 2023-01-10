@@ -7,7 +7,7 @@ from tencentcloud.dnspod.v20210323 import dnspod_client, models
 from os.path import join
 from getIP import getIPv6Address
 
-# 读取同目录下的 SECRET, Domain 文件
+# 读取同目录下的 SECRET, Domain, RecordSettings 文件
 def ReadFile(path:str):
     
     with open(join(path, "Secret"), mode="r", encoding="utf-8") as f:

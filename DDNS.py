@@ -9,12 +9,13 @@ from getIP import getIPv6Address
 
 # 读取同目录下的 SECRET, Domain 文件
 def ReadFile(path:str):
+    
     with open(join(path, "Secret"), mode="r", encoding="utf-8") as f:
-        Secret = eval(f.read().replace("\r\n", "").replace("\n", ""))
+        Secret = json.load(f)
     with open(join(path, "Domain"), mode="r", encoding="utf-8") as f:
-        Domain = eval(f.read().replace("\r\n", "").replace("\n", ""))
+        Domain = json.load(f)
     with open(join(path, "RecordSettings"), mode="r", encoding="utf-8") as f:
-        RecordSettings = eval(f.read().replace("\r\n", "").replace("\n", ""))
+        RecordSettings = json.load(f)
     return Secret, Domain, RecordSettings
 
 # 获取 RecordId

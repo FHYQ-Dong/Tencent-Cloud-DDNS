@@ -93,6 +93,7 @@ def DDNS(Domain:dict, RecordSettings:dict, IP:str, Secret:dict):
 if __name__ == "__main__":
     Secret, Domain, RecordSettings = ReadFile(r"./")
     RecordId = GetRecordId(Domain, Secret)
-    IP = getIPv6Address()
-    res = DDNS(Domain, RecordSettings, IP, Secret)
-    print(res)
+    print(RecordId)
+    #IP = getIPv6Address()
+    #res = DDNS(Domain, RecordSettings, IP, Secret)
+    #print(res)
